@@ -1,0 +1,64 @@
+@-moz-document url(about:home) {
+	body
+  {
+    background-color: #2D253A !important;
+	background-image: url("https://source.unsplash.com/user/ahmetozer/likes/1920x1080") !important;
+	background-repeat:no-repeat !important;
+	background-size: cover !important;
+	background-position: center !important;
+	overflow:hidden !important;
+  }
+	#onboarding-overlay-button, .prefs-button { display: none !important; }
+	.section-title .click-target span {
+	  color: #fff !important;
+	  fill: #fff !important;
+  }
+	.top-site-inner .title span {
+	  color: #fff !important;
+  }
+  
+	.prefs-pane-button button:hover {
+	  background-color: #0000001a !important;
+  }
+	.edit-topsites-button .edit span {
+	  color: #fff !important;
+  }
+}
+@-moz-document url(about:newtab) {
+	body
+  {
+	background-color: #2D253A !important;
+	background-image: url("https://source.unsplash.com/user/ahmetozer/likes/1920x1080") !important;
+	background-repeat:no-repeat !important;
+	background-size: cover !important;
+	background-position: center !important;
+	overflow:hidden !important;
+  }
+	#onboarding-overlay-button, .prefs-button { display: none !important; }
+	.section-title .click-target span {
+	  color: #fff !important;
+	  fill: #fff !important;
+  }
+	.top-site-inner .title span {
+	  color: #fff !important;
+  }
+	.prefs-pane-button button:hover {
+	  background-color: #0000001a !important;
+  }
+	.edit-topsites-button .edit span{
+	  color: #fff !important;
+  }
+}
+
+@-moz-document url(about:blank) {
+	body
+  {
+	background-color: #2D253A !important;
+	/*background-image: url("https://source.unsplash.com/user/ahmetozer/likes/1920x1080") !important;*/
+	background-repeat:no-repeat !important;
+	background-size: cover !important;
+	background-position: center !important;
+	overflow:hidden !important;
+  }
+	#onboarding-overlay-button, .prefs-button { display: none !important; }
+}

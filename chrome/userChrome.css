@@ -1,0 +1,135 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* 
+Original layout by /u/Herkt https://www.reddit.com/r/FirefoxCSS/comments/7eazix/my_attempt_at_a_oneline_interface/ 
+New layout by https://ahmetozer.org
+Use with compact density
+dynamic theme https://addons.mozilla.org/en-US/firefox/addon/weatherlicious/
+*/
+:root {
+  --tabs-border: transparent !important;                             /* active tab left & right borders - not working in 58?*/
+  --toolbox-border-bottom-color: transparent !important;             /* 1px line under background tabs */
+  --chrome-nav-bar-controls-border-color: transparent !important;    /* border around url bar */
+}
+browser {
+/*  To Remove Scrollbar
+    margin-right: -10px !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    */ 
+}
+ /* Move Tab-bar beside Nav-bar */
+#TabsToolbar {      
+  margin-bottom: 0px !important;
+  margin-top: 0px !important; 
+  margin-left: 35vw !important;
+  margin-right: 0px !important;
+  max-height: 35px !important;
+}
+
+#nav-bar {      
+  margin-bottom: -1px !important; 
+  margin-top: -35px !important;
+  margin-right: 65vw !important; 
+  margin-left: -5px !important; 
+  border-top: none !important;
+  height: 35px !important;
+}   
+
+/* Remove padding above tabbar in compact mode */
+#main-window[sizemode="normal"] > #titlebar {
+  -moz-appearance: initial !important;
+}
+
+
+/* Back & Forward buttons */  
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon {
+  transform: scale(0.9, 0.9) !important;
+  margin-left: -2px !important;
+  margin-right: -2px !important; 
+}
+
+/* Move hamburger menu to the left */
+#PanelUI-button,
+#customization-panel-container,
+#customization-panelWrapper .panel-arrow { 
+  -moz-box-ordinal-group: 0 !important;
+  margin-right: -6px !important;
+}
+
+#appMenu-popup {
+  margin-right: -258px !important;
+}
+
+#appMenu-popup .panel-arrow {
+  margin-right: 248px !important;
+}
+
+/* More tools... button */
+#nav-bar-overflow-button { 
+  transform: scale(0.9, 0.9) !important;
+  fill: var(--color-overflow) !important;
+}  
+
+
+/* Tabs */
+.tabbrowser-tab {
+  height: 32px !important; 
+}
+
+/* Remove empty space before first tab
+Delete this rule if you need a space to drag the window*/
+#TabsToolbar .titlebar-placeholder[type="pre-tabs"]{
+    display: none !important;
+}
+
+/* Remove border between tabs
+Delete this rule if you want separators between background tabs */
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+  border-left: none !important;
+} 
+
+/* Border between background tabs */
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+  color: grey !important; 
+  opacity: .2 !important; 
+ }
+
+/* New tab button color */
+#new-tab-button, .tabs-newtab-button {
+  fill: var(--chrome-color) !important;
+  } 
+
+/* tab line - adjust color & size, default #0a84ff 2px */
+.tab-line {
+  background-color: #0a84ff !important;
+  height: 0px !important;
+  }
+
+
+/* Hide various elements */
+/* Menu */
+#appMenu-fxa-container,                    /* Sign in to Sync */
+#appMenu-fxa-container+toolbarseparator,
+/* #appMenuRestoreLastSession, */
+#appMenu-zoom-controls,
+#appMenu-zoom-controls+toolbarseparator,
+#appMenu-edit-controls,
+#appMenu-edit-controls+toolbarseparator,
+#appMenu-library-button,
+#appMenu-customize-button,
+#appMenu-customize-button+toolbarseparator,
+#appMenu-open-file-button,
+#appMenu-save-file-button,
+#appMenu-find-button,
+#appMenu-more-button,
+
+/* URL Bar */
+#pageActionButton,
+#pocket-button-box,
+ar-button,
+.autocomplete-history-dropmarker,
+#identity-icon-labels
+{
+    display: none !important;
+}
